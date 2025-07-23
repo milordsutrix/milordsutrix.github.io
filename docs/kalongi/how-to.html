@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide : Générer un Podcast Automatique avec NotebookLM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f9;
+            color: #333;
+            margin: 0;
+        }
+        .container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .header p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+        .step {
+            margin-bottom: 3rem;
+            padding-left: 2.5rem;
+            position: relative;
+            border-left: 3px solid #e0e0e0;
+        }
+        .step::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -20px;
+            top: -5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #007bff;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: 3px solid #fff;
+        }
+        .step h2 {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-top: 0;
+        }
+        .step p, .step ol {
+            font-size: 1rem;
+            color: #444;
+        }
+        .step strong {
+            color: #2c3e50;
+        }
+        .screenshot {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .info-box {
+            background-color: #e7f3ff;
+            border-left: 5px solid #007bff;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1> La Fonction Audio de NotebookLM</h1>
+            <p>Créez un résumé audio et une conversation de type podcast directement depuis un lien YouTube.</p>
+        </header>
+
+        <div class="steps-container">
+
+            <div class="step" data-step="1">
+                <h2>Étape 1 : Se Connecter et Créer un "Cahier"</h2>
+                <p>Avant d'ajouter votre vidéo, vous devez vous connecter et créer un espace de travail, appelé "Cahier" (Notebook).</p>
+                <ol>
+                    <li>Rendez-vous sur le site officiel : <strong><a href="https://notebooklm.google.com/" target="_blank">https://notebooklm.google.com/</a></strong>.
+                        <img src="/images/notebook-intro1.png" alt="Screenshot montrant le bouton pour créer un nouveau cahier" class="screenshot">
+                    </li>
+                    <li>Le site vous demandera de vous connecter. Utilisez votre <strong>compte Google</strong> habituel pour vous authentifier.</li>
+                    <li>Une fois connecté, cliquez sur le bouton <strong>"+ Nouveau cahier"</strong> pour créer votre premier espace de projet.
+                    </li>
+                </ol>
+                <img src="/images/notebook-create-2.png"" alt="Screenshot montrant le bouton pour créer un nouveau cahier" class="screenshot">
+            </div>
+            
+            <div class="step" data-step="2">
+                <h2>Étape 2 : Ajouter votre Lien YouTube comme Source</h2>
+                <p>Maintenant que votre cahier est créé, vous pouvez y ajouter le contenu de la vidéo.</p>
+                <ol>
+                    <li>À l'intérieur de votre nouveau cahier, cliquez sur le bouton bleu <strong>"+ Ajouter une source"</strong>.</li>
+                    <li>Dans le menu qui s'ouvre, sélectionnez l'option <strong>"Lien YouTube"</strong>.</li>
+                    <li>Collez l'URL de votre vidéo YouTube dans le champ prévu à cet effet et validez.</li>
+                </ol>
+                <img src="/images/notebook-choose-3.png" alt="Screenshot montrant comment ajouter une source YouTube dans NotebookLM" class="screenshot">
+                <div class="info-box">
+                    <p><strong>Patientez un instant...</strong> NotebookLM va maintenant analyser la vidéo, récupérer la transcription et préparer les fonctions audio. Cela peut prendre une minute ou deux.</p>
+                </div>
+            </div>
+
+            <div class="step" data-step="3">
+                <h2>Étape 3 : Découvrir les Fonctions Audio Automatiques</h2>
+                <p>Une fois le traitement terminé, NotebookLM vous proposera des formats audio basés sur le contenu de la vidéo. </p>
+                <p>Cette section contient deux options principales :</p>
+                <ul>
+                    <li>🎙️ <strong>Personnaliser :</strong> option pour donner des instructions detaillé sur la manière dont l'audio sera crée.</li>
+                    <li>💬 <strong>Generer :</strong> Pour génerer l'audio.</li>
+                </ul>
+                <img src="/images/notebook-choose-3.png" alt="Screenshot montrant comment ajouter une source YouTube dans NotebookLM" class="screenshot">
+            </div>
+
+            
+            
+        </div>
+    </div>
+</body>
+</html>        
